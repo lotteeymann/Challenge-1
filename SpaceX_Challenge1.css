@@ -1,0 +1,629 @@
+img{
+	width: 400px;
+	margin: 20px;
+	/*Grootte van SpaceX logo bepalen*/
+}
+
+.Title{
+	margin: 10px;
+	padding: 10px;
+	/*ruimte rondom de paginatitel voor overzicht in design*/
+}
+
+.Voertuig{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	/*plaatsing van div d.m.v. flexbox*/
+	width: 100%;
+	box-sizing: border-box;
+	margin: auto;
+	/*breedte naar scherm aanpassen en margin op nul voor midden*/
+	padding: 10px;
+	/*ruimte geven voor overzicht in design*/
+	border-radius: 5px;
+	/*afgeronde randen*/
+	}
+
+.informatie{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	box-sizing: border-box;
+	margin: auto;
+	padding: 10px;
+	margin-top: 10px;
+	/*margin-top toegevoegd voor afstand tussen de twee flexboxen*/
+	border-radius: 5px;
+}
+
+html{
+	background: url(Achtergrond.jpeg) no-repeat center center fixed;
+	background-size: cover;
+	/*afbeelding als achtergrond gebruiken. Instellen dat 'ie in het midden staat, zichzelf niet herhaald en geschaald wordt over de hele achtergrond.*/
+}
+
+.Kopje1{
+	text-align: center;
+	font-family: Arial Black;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	/*zorgt ervoor dat alle kopjes in het midden van eigen div komen te staan*/
+}
+
+.Kopje2{
+	text-align: left;
+	/*zelfde als kopje1 behalve uitlijning ivm fijne leesbaarheid van de tekst*/
+	font-family: Arial Black;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 20px;
+	/*i.v.m. uitlijning links ook een marge zodat het kopje niet tegen de rand van de box aan staat*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Hier begint visualisatie voor brandstof*/
+.Brandstof{
+	border-radius: 5px;
+	background: rgb(255, 255, 255, 0.7);
+	padding: 10px;
+	margin: 10px;
+	width: 90%;
+	height: 400px;
+}
+
+#Visualisatie1{
+	display: block;
+	position: relative;
+	padding: 10px;
+}
+
+.Liters{
+  position: absolute;
+	left: 100px;
+  /*de balk vast neerzetten en een stukje laten springen van links, zodat de tekst te lezen is.*/
+ 	bottom: 0;
+ 	/*zorgt ervoor dat de balk onderaan de tabel begint met weergeven*/
+  margin-bottom: 17px;
+  /*zorgen dat de balk niet helemaal onderaan de div komt te staan maar wat hoger in de tabel. Zo klopt het aflezen.*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*alleen de bovenste twee hoeken afgerond stijlen*/
+  z-index: 2;
+  /*instellen dat de balk in de bovenste laag van de tabel weergegeven wordt*/
+  height: 70%;
+	width: 230px;
+	/*dikte en hoogte van balk instellen*/
+  background-color: rgb(0,0,0);
+  /*kleur van balk instellen*/
+}
+
+#Visualisatie1 tbody tr {
+  height: 300px;
+  padding-top: 10px;
+}
+
+#Hoeveelheden{
+	position: relative;
+	top: -300px;
+	/*ruimte wonderaan tabel weghalen, dit was 300px. Anders onnodige witruimte*/
+	width: 500px;
+	height: 0px;
+	z-index: 1;
+	/*bepalen dat de woorden die naast de tabel staan, de hoeveelheden, op eerste tweede laag staan in het beeld. Dus onder de balk.*/
+	font-size: 15px;
+}
+
+#Hoeveelheden p{
+	font-family: Arial;
+	text-transform: capitalize;
+	/*om tegen de stijl gegeven bij .Branstof in te gaan*/
+	border-bottom-style: dotted;
+	border-bottom-color: rgb(0, 0, 0, 0.2);
+	border-bottom-width: 1px;
+	width: 300px;
+	/*stippellijn voor het aflezen van de tabel*/
+}
+
+
+#Hoeveelheden .hoeveelheid{
+	display: block;
+	position: relative;
+	left: 10px;
+	/*zorgen ervoor dat de termen links staan en iets verder binnen de div*/
+	height: 110px;
+	/*stelt de hoogte in van iedere term links van tabel, zodat ze zoveel pixels onder elkaar komen te staan*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Hier begint visualisatie G-force*/
+.G-force{
+	border-radius: 5px;
+	background: rgb(255, 255, 255, 0.7);
+	padding: 10px;
+	margin: 10px;
+	width: 90%;
+	height: 400px;
+}
+
+.G-forceOverzicht{
+	display: flex;
+	flex-direction: column;
+}
+
+.G-forceOverzicht div{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 20px;
+}
+
+#balkje1,
+#balkje2{
+	height: 50px;
+	border-radius: 10px;
+	flex-grow: 2;
+}
+
+#balkje2{
+	width: 60%;
+	background-color: rgb(0,0,0);
+}
+
+#balkje1{
+	width: 2%;
+	background-color: rgb(0,0,0);
+}
+
+.text{
+	font-family: Arial;
+	width: 20px;
+	flex-grow: 1;
+	align-self: center;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Hier begint visualisatie snelheid*/
+
+.Snelheid{
+	border-radius: 5px;
+	background: rgb(255, 255, 255, 0.7);
+	padding: 10px;
+	margin: 10px;
+	width: 90%;
+	height: 400px;
+}
+
+.Kilometers{
+	font-family: Arial;
+	text-transform: capitalize;
+	font-size: 100px;
+	text-align: center;
+}
+
+.PerSeconde{
+	font-family: Arial;
+	text-transform: capitalize;
+	font-size: 30px;
+	text-align: center;
+	margin-top: -90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*hier begint visualisatie van de tekst "Why Mars?". Afkomstig van https://www.spacex.com/human-spaceflight/mars/ */
+
+.WaaromMars{
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	width: 90%;
+	height: 400px;
+}
+
+.Alinea1{
+	font-family: arial;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Hier begint de een na laatste visualisatie waar een tekst van Elon Musk in is te zien. Afkomstig van https://www.spacex.com/human-spaceflight/mars/ */
+.ElonMusk{
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	width: 90%;
+	height: 400px;
+}
+
+.Alinea2{
+	font-family: arial;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	margin: 20px;
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Hier begint de laatste visualisatie met afstanden tot iedere planeet*/
+
+.distance{
+	border-radius: 5px;
+	background: rgb(255, 255, 255, 0.7);
+	padding: 10px;
+	margin: 10px;
+	width: 90%;
+	height: 400px;
+}
+
+#distanceTabel tbody{
+	display: block;
+	position: absolute;
+	padding: 10px;
+	width: 100px;
+}
+
+.afstandVenus{
+	position: absolute;
+	left: 80px;
+	top: 150px;
+	/*Balkje op onderste lijn plaatsen, 165 pixels te hoog anders*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*alleen de bovenste twee hoeken afgerond stijlen*/
+  z-index: 2;
+  /*instellen dat de balk in de bovenste laag van de tabel weergegeven wordt*/
+  height: 100px;
+	width: 40%;
+	/*dikte en hoogte van balk instellen*/
+  background-color: rgb(0,0,0);
+  /*kleur van balk instellen*/
+}
+
+.afstandMars{
+	position: absolute;
+	left: 150px;
+	top: 70px;
+	/*Balkje op onderste lijn plaatsen, 165 pixels te hoog anders*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*alleen de bovenste twee hoeken afgerond stijlen*/
+  z-index: 2;
+  /*instellen dat de balk in de bovenste laag van de tabel weergegeven wordt*/
+  height: 180px;
+	width: 40%;
+	/*dikte en hoogte van balk instellen*/
+  background-color: rgb(0,0,0);
+  /*kleur van balk instellen*/
+}
+
+.afstandJupiter{
+	position: absolute;
+	left: 220px;
+	top: 50px;
+	/*Balkje op onderste lijn plaatsen, 165 pixels te hoog anders*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*alleen de bovenste twee hoeken afgerond stijlen*/
+  z-index: 2;
+  /*instellen dat de balk in de bovenste laag van de tabel weergegeven wordt*/
+  height: 200px;
+	width: 40%;
+	/*dikte en hoogte van balk instellen*/
+  background-color: rgb(0,0,0);
+  /*kleur van balk instellen*/
+}
+
+.afstandSaturn{
+	position: absolute;
+	left: 290px;
+	top: 10px;
+	/*Balkje op onderste lijn plaatsen, 165 pixels te hoog anders*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*alleen de bovenste twee hoeken afgerond stijlen*/
+  z-index: 2;
+  /*instellen dat de balk in de bovenste laag van de tabel weergegeven wordt*/
+  height: 240px;
+	width: 40%;
+	/*dikte en hoogte van balk instellen*/
+  background-color: rgb(0,0,0);
+  /*kleur van balk instellen*/
+}
+
+#Afstanden{
+	position: relative;
+	z-index: 1;
+	/*bepalen dat dit onderdeel in onderste laag weergegeven wordt. Dus onder de balk.*/
+	font-size: 15px;
+	width: 90%;
+}
+
+#Afstanden .miljoen{
+	display: block;
+	position: relative;
+	left: 10px;
+	height: 110px;
+	font-family: Arial;
+	text-transform: capitalize;
+	border-bottom-style: dotted;
+	border-bottom-color: rgb(0, 0, 0, 0.2);
+	border-bottom-width: 1px;
+}
+
+#Afstanden .miljoenGeenLijn{
+	display: block;
+	position: relative;
+	left: 10px;
+	height: 110px;
+	font-family: Arial;
+	text-transform: capitalize;
+}
+
+.Alinea3{
+	Font-family: arial;
+	font-size: 18px;
+	color: rgb(0, 0, 0);
+	display: block;
+	position: relative;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Hieronder heb ik de media quaries verwerkt*/
+
+/*Tablet*/
+@media only screen and (min-width: 800px){
+	.Liters{
+		width: 80%;
+	}
+
+	#Hoeveelheden p{
+		width: 500px;
+	}
+}
+
+/*Desktop klein*/
+@media only screen and (min-width: 1000px){
+	.Voertuig{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.informatie{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.Brandstof{
+		width: 30%;
+	}
+
+	.G-force{
+		width: 30%;
+	}
+
+	.Snelheid{
+		width: 30%;
+	}
+
+	.Liters{
+		width: 55%;
+	}
+
+	.WaaromMars{
+		width: 30%;
+	}
+
+	.ElonMusk{
+		width: 30%;
+	}
+
+	.distance{
+		width: 30%;
+		height: 500px;
+	}
+
+	#Hoeveelheden p{
+		width: 200px;
+	}
+
+	h1{
+	font-family: Arial Black;
+	text-transform: uppercase;
+	color: whitesmoke;
+	/*bepalen eigenschappen van paginatitel*/
+	}
+
+	.afstandVenus{
+		width: 25%;
+		left: 60px;
+	}
+
+	.afstandMars{
+		width: 25%;
+		left: 110px;
+	}
+
+	.afstandSaturn{
+		width: 25%;
+		left: 160px;
+	}
+
+	.afstandJupiter{
+		width: 25%;
+		left: 210px;
+	}
+}
+
+
+/*Desktop groot*/
+@media only screen and (min-width: 1200px){
+	.Voertuig{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.Brandstof{
+		width: 30%;
+	}
+
+	.G-force{
+		width: 30%;
+	}
+
+	.Snelheid{
+		width: 30%;
+	}
+
+	.Liters{
+		width: 70%;
+	}
+
+	#Hoeveelheden p{
+		width: 300px;
+	}
+
+	h1{
+		font-family: Arial Black;
+		text-transform: uppercase;
+		color: whitesmoke;
+		/*bepalen eigenschappen van paginatitel*/
+	}
+
+	.distance{
+		width: 30%;
+		height: 500px;
+	}
+
+	.afstandVenus{
+		width: 35%;
+		left: 60px;
+	}
+
+	.afstandMars{
+		width: 35%;
+		left: 120px;
+	}
+
+	.afstandSaturn{
+		width: 35%;
+		left: 180px;
+	}
+
+	.afstandJupiter{
+		width: 35%;
+		left: 240px;
+	}
+
+}
